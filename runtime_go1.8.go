@@ -1,6 +1,6 @@
-// +build go1.6
+// +build go1.8,!go1.9
 
-package main
+package fastcgo
 
 type stack struct {
 	lo uintptr
@@ -26,15 +26,9 @@ type g struct {
 	stackguard0 uintptr
 	stackguard1 uintptr
 
-	_panic       uintptr
-	_defer       uintptr
-	m            *m
-	sched        gobuf
-	syscallsp    uintptr
-	syscallpc    uintptr
-	stktopsp     uintptr
-	param        uintptr
-	atomicstatus uint32
-	stackLock    uint32
-	goid         int64 // Here it is!
+	_panic     uintptr
+	_defer     uintptr
+	m          *m
+	stackAlloc uintptr
+	sched      gobuf
 }
