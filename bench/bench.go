@@ -1,12 +1,12 @@
 package bench
 
-// #include <stdio.h>
 // #include <stdint.h>
+// #include <stdio.h>
 //
 // void noop() {
 // }
 // void hello(uint64_t arg) {
-//   printf("Hello, C++: %lld\n", arg);
+//   printf("Hello, C: %lld\n", arg);
 // }
 import "C"
 
